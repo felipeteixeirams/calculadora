@@ -12,6 +12,7 @@ namespace Calculadora
 {
     public partial class frmCalculadora : Form
     {
+        Calculos c = new Calculos();
         public frmCalculadora()
         {
             InitializeComponent();
@@ -21,32 +22,28 @@ namespace Calculadora
         {
             int numero1 = Convert.ToInt32(txbNumero1.Text);
             int numero2 = Convert.ToInt32(txbNumero2.Text);
-            int resultado = numero1 + numero2;
-            txbResultado.Text = resultado.ToString();
+            txbResultado.Text = c.Somar(numero1, numero2).ToString();
         }
 
         private void btnSubtrair_Click(object sender, EventArgs e)
         {
             int numero1 = Convert.ToInt32(txbNumero1.Text);
             int numero2 = Convert.ToInt32(txbNumero2.Text);
-            int resultado = numero1 - numero2;
-            txbResultado.Text = resultado.ToString();
+            txbResultado.Text = c.Subtrair(numero1, numero2).ToString();
         }
 
         private void btnMultiplicar_Click(object sender, EventArgs e)
         {
             int numero1 = Convert.ToInt32(txbNumero1.Text);
             int numero2 = Convert.ToInt32(txbNumero2.Text);
-            int resultado = numero1 * numero2;
-            txbResultado.Text = resultado.ToString();
+            txbResultado.Text = c.Multiplicar(numero1, numero2).ToString();
         }
 
         private void btnDividir_Click(object sender, EventArgs e)
         {
             int numero1 = Convert.ToInt32(txbNumero1.Text);
             int numero2 = Convert.ToInt32(txbNumero2.Text);
-            int resultado = numero1 / numero2;
-            txbResultado.Text = resultado.ToString();
+            txbResultado.Text = c.Dividir(numero1, numero2).ToString();
         }
     }
 }
