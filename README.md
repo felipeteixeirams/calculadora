@@ -1,3 +1,4 @@
 <h1>Calculadora simples ➕✖➗➖😁</h1>
 <hr>
-Projeto calculadora escrito em C#, onde é realizada as principais operações matemáticas.
+Projeto construção de uma calculadora simples, onde é realizada as principais operações matemáticas.
+☂ Escrito em C# utilizando Windows Forms.
